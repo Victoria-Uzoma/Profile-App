@@ -1,44 +1,120 @@
+import { Link } from "react-router-dom";
 import WhatsAppButton from "./WhatsAppButton";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#08142b] text-white mt-10 py-10 px-6">
+    <footer className="bg-[#08142B] text-[#F8FAFC] border-t border-[#1E3354]">
 
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="max-w-6xl mx-auto px-6 py-16">
 
-        {/* LEFT SIDE */}
-        <div className="text-center md:text-left">
-          <h2 className="text-2xl font-bold mb-2">
-            Victoria Paul
-          </h2>
-          <p className="text-gray-400">
-            Front-End Developer & Graphic Designer
-          </p>
+        {/* TOP SECTION */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 pb-14">
+
+          {/* BRAND */}
+          <div className="lg:col-span-2">
+
+            <p className="text-[#14B8A6] uppercase tracking-[0.25em] text-sm font-semibold mb-5">
+              Victoria Paul
+            </p>
+
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight max-w-xl mb-5">
+              Developer, designer, and
+              <span className="text-[#3B82F6]"> problem solver.</span>
+            </h2>
+
+            <p className="text-[#94A3B8] leading-7 max-w-xl">
+              I build digital experiences through code and design, while
+              continuously expanding my technical skills and creative
+              perspective.
+            </p>
+
+          </div>
+
+          {/* NAVIGATION */}
+          <div>
+            <p className="text-[#94A3B8] uppercase tracking-[0.2em] text-sm font-semibold mb-5">
+              Explore
+            </p>
+
+            <nav className="flex flex-col gap-3">
+
+              <Link
+                to="/"
+                className="text-[#CBD5E1] hover:text-[#14B8A6] transition-colors duration-300"
+              >
+                Home
+              </Link>
+
+              <Link
+                to="/about"
+                className="text-[#CBD5E1] hover:text-[#14B8A6] transition-colors duration-300"
+              >
+                About
+              </Link>
+
+              <Link
+                to="/projects"
+                className="text-[#CBD5E1] hover:text-[#14B8A6] transition-colors duration-300"
+              >
+                Projects
+              </Link>
+
+              <Link
+                to="/skills"
+                className="text-[#CBD5E1] hover:text-[#14B8A6] transition-colors duration-300"
+              >
+                Skills
+              </Link>
+
+              <Link
+                to="/Blog"
+                className="text-[#CBD5E1] hover:text-[#14B8A6] transition-colors duration-300"
+              >
+                Blog
+              </Link>
+
+              <Link
+                to="/contact"
+                className="text-[#CBD5E1] hover:text-[#14B8A6] transition-colors duration-300"
+              >
+                Contact
+              </Link>
+
+            </nav>
+          </div>
+
         </div>
 
-        {/* CENTER LINKS */}
-        <div className="flex flex-col gap-2 text-center">
-          <p className="text-gray-300">Home</p>
-          <p className="text-gray-300">Projects</p>
-          <p className="text-gray-300">Contact</p>
-        </div>
+        {/* CTA */}
+        <div className="border-y border-[#1E3354] py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
 
-        {/* RIGHT SIDE */}
-        <div className="text-center md:text-right flex flex-col items-center md:items-end gap-3">
+          <div>
+            <p className="text-xl font-semibold mb-2">
+              Have a project in mind?
+            </p>
 
-          <p className="text-gray-400">
-            Let's build something great together
-          </p>
+            <p className="text-[#94A3B8]">
+              Let&apos;s start a conversation.
+            </p>
+          </div>
 
           <WhatsAppButton />
 
         </div>
 
-      </div>
+        {/* BOTTOM */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
 
-      {/* BOTTOM LINE */}
-      <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} Victoria Paul. All rights reserved.
+          <p className="text-[#64748B]">
+            © {new Date().getFullYear()} Victoria Paul. All rights reserved.
+          </p>
+
+          <p className="text-[#64748B]">
+            Development • Design • Continuous Learning
+          </p>
+
+        </div>
+
       </div>
 
     </footer>

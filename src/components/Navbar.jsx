@@ -1,20 +1,11 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-export default function Navbar({ active, setActive }) {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleClick = (page) => {
-    setActive(page);
-    setMenuOpen(false);
-  };
-
-  const btnStyle = (page) =>
-    active === page
-      ? "text-blue-400 font-bold"
-      : "text-white hover:text-blue-300";
-
   return (
-    <nav className="bg-[#08142b] text-white px-6 py-4">
+    <nav className="bg-[#08142B] text-[#F8FAFC] px-6 py-4">
 
       <div className="flex justify-between items-center">
 
@@ -32,25 +23,71 @@ export default function Navbar({ active, setActive }) {
         {/* DESKTOP MENU */}
         <div className="hidden md:flex gap-6">
 
-          <button className={btnStyle("home")} onClick={() => handleClick("home")}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#3B82F6] font-bold"
+                : "text-[#F8FAFC] hover:text-[#3B82F6]"
+            }
+          >
             Home
-          </button>
+          </NavLink>
 
-          <button className={btnStyle("about")} onClick={() => handleClick("about")}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#3B82F6] font-bold"
+                : "text-[#F8FAFC] hover:text-[#3B82F6]"
+            }
+          >
             About
-          </button>
+          </NavLink>
 
-          <button className={btnStyle("contact")} onClick={() => handleClick("contact")}>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+          >
             Contact
-          </button>
+          </NavLink>
 
-          <button className={btnStyle("projects")} onClick={() => handleClick("projects")}>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+          >
             Projects
-          </button>
+          </NavLink>
 
-          <button className={btnStyle("skillsvalue")} onClick={() => handleClick("skillsvalue")}>
+          <NavLink
+            to="/skills"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+          >
             Skills & Value
-          </button>
+          </NavLink>
+
+          <NavLink
+            to="/blog"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+          >
+            Blog
+          </NavLink>
 
         </div>
 
@@ -68,25 +105,77 @@ export default function Navbar({ active, setActive }) {
       {menuOpen && (
         <div className="md:hidden flex flex-col gap-4 mt-4">
 
-          <button className={btnStyle("home")} onClick={() => handleClick("home")}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+            onClick={() => setMenuOpen(false)}
+          >
             Home
-          </button>
+          </NavLink>
 
-          <button className={btnStyle("about")} onClick={() => handleClick("about")}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+            onClick={() => setMenuOpen(false)}
+          >
             About
-          </button>
+          </NavLink>
 
-          <button className={btnStyle("contact")} onClick={() => handleClick("contact")}>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+            onClick={() => setMenuOpen(false)}
+          >
             Contact
-          </button>
+          </NavLink>
 
-          <button className={btnStyle("projects")} onClick={() => handleClick("projects")}>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+            onClick={() => setMenuOpen(false)}
+          >
             Projects
-          </button>
+          </NavLink>
 
-          <button className={btnStyle("skillsvalue")} onClick={() => handleClick("skillsvalue")}>
+          <NavLink
+            to="/skills"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+            onClick={() => setMenuOpen(false)}
+          >
             Skills & Value
-          </button>
+          </NavLink>
+
+          <NavLink
+            to="/blog"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-400 font-bold"
+                : "text-white hover:text-blue-300"
+            }
+            onClick={() => setMenuOpen(false)}
+          >
+            Blog
+          </NavLink>
 
         </div>
       )}
