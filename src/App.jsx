@@ -1,35 +1,46 @@
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import SkillsValue from "./components/SkillsValue";
-import Blog from "./Blog/Blog";
-import Article from "./Blog/articles/Article";
-export default function App() {
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import Contact from "./pages/Contact";
+
+function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-mode" : "light-mode";
+  }, [darkMode]);
+
   return (
-    <div className="bg-[#0b1b3a] min-h-screen text-white">
+    <div className="app">
+      <Navbar
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
 
-      {/* NAVBAR */}
-      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
 
-      {/* PAGE CONTENT */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<SkillsValue />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/Blog/:slug" element={<Article />} />
-      </Routes>
-
-      {/* FOOTER */}
       <Footer />
-
     </div>
   );
-};
+}
+
+export default App;
