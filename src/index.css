@@ -74,9 +74,9 @@ button {
 }
 
 .page-section {
-  padding-top: 180px;
-  padding-bottom: 100px;
-  min-height: 80vh;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  min-height: auto;
 }
 
 .eyebrow {
@@ -129,7 +129,7 @@ h2 span {
 
 .page-header {
   max-width: 800px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .page-header > p:last-child {
@@ -776,6 +776,10 @@ h2 span {
 }
 
 @media (max-width: 500px) {
+  .page-section {
+   padding-top: 45px;
+   padding-bottom: 35px;
+  }
 
   h1 {
     font-size: 3rem;

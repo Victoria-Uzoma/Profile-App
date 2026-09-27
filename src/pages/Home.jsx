@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { ArrowRight, ExternalLink } from "lucide-react";
 
-import { projects, articles } from "../data/data";
+import { projects, articles, skills } from "../data/data";
 import SkillOrbit from "../components/SkillOrbit";
 
 function Home() {
@@ -94,9 +94,7 @@ function Home() {
 
         </div>
 
-        <SkillOrbit skills={[
-          { name: "HTML", icon: "html" }
-        ]} />
+        <SkillOrbit skills={skills}/>
 
         <div className="section-action">
           <NavLink to="/skills" className="section-link">
