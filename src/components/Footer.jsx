@@ -26,7 +26,7 @@ function Footer() {
             </div>
 
             <p className="copyright">
-                2026 Victoria Uzoma. All rights reserved.
+               © 2026 Victoria Uzoma. All rights reserved.
             </p>
         </footer>
     );

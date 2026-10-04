@@ -729,7 +729,9 @@ h2 span {
   .page-section {
     width: min(100% - 28px, 700px);
   }
-
+  .orbit-ring {
+  animation: orbitSpin 12s linear infinite;
+  }
   .hero-content {
     width: min(100% - 28px, 700px);
   }

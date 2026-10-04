@@ -24,6 +24,12 @@ function Projects() {
         {projects.map((project) => (
           <article className="project-card" key={project.title}>
 
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project-image"
+            />
+
             <p className="card-label">PROJECT</p>
 
             <h2>{project.title}</h2>
@@ -40,12 +46,20 @@ function Projects() {
 
             <div className="project-links">
 
-              <a href={project.link}>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <ExternalLink size={16} />
                 Live Project
               </a>
 
-              <a href={project.github}>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaGithub size={16} />
                 GitHub
               </a>

@@ -94,13 +94,15 @@ function Home() {
 
         </div>
 
-        <SkillOrbit skills={skills}/>
+        <SkillOrbit skills={skills} />
 
         <div className="section-action">
+
           <NavLink to="/skills" className="section-link">
             View All Skills
             <ArrowRight size={17} />
           </NavLink>
+
         </div>
 
       </section>
@@ -126,7 +128,17 @@ function Home() {
         <div className="project-grid">
 
           {featuredProjects.map((project) => (
-            <article className="project-card" key={project.title}>
+
+            <article
+              className="project-card"
+              key={project.title}
+            >
+
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
 
               <p className="card-label">PROJECT</p>
 
@@ -135,28 +147,39 @@ function Home() {
               <p>{project.description}</p>
 
               <div className="technology-list">
+
                 {project.technologies.map((technology) => (
+
                   <span key={technology}>
                     {technology}
                   </span>
+
                 ))}
+
               </div>
 
-              <a href={project.link}>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View Project
                 <ExternalLink size={16} />
               </a>
 
             </article>
+
           ))}
 
         </div>
 
         <div className="section-action">
+
           <NavLink to="/projects" className="section-link">
             View All Projects
             <ArrowRight size={17} />
           </NavLink>
+
         </div>
 
       </section>
@@ -182,9 +205,15 @@ function Home() {
         <div className="blog-grid">
 
           {latestArticles.map((article) => (
-            <article className="blog-card" key={article.slug}>
 
-              <p className="card-label">{article.category}</p>
+            <article
+              className="blog-card"
+              key={article.slug}
+            >
+
+              <p className="card-label">
+                {article.category}
+              </p>
 
               <h3>{article.title}</h3>
 
@@ -198,15 +227,18 @@ function Home() {
               </NavLink>
 
             </article>
+
           ))}
 
         </div>
 
         <div className="section-action">
+
           <NavLink to="/blog" className="section-link">
             Read Blog
             <ArrowRight size={17} />
           </NavLink>
+
         </div>
 
       </section>

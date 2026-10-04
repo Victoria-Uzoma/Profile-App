@@ -1,6 +1,5 @@
 import { Mail } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -21,17 +20,22 @@ function Contact() {
       <div className="contact-grid">
 
         <a
-          href="mailto:your@email.com"
+          href="mailto:vuzoma140@gmail.com"
           className="contact-card"
         >
           <Mail size={25} />
 
           <span>Email</span>
 
-          <strong>your@email.com</strong>
+          <strong>vuzoma140@gmail.com</strong>
         </a>
 
-        <a href="#" className="contact-card">
+        <a
+          href="https://linkedin.com/in/victoria-uzoma-b76274433"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-card"
+        >
           <FaLinkedin size={25} />
 
           <span>LinkedIn</span>
@@ -39,7 +43,12 @@ function Contact() {
           <strong>Connect with me</strong>
         </a>
 
-        <a href="#" className="contact-card">
+        <a
+          href="https://github.com/Victoria-Uzoma"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-card"
+        >
           <FaGithub size={25} />
 
           <span>GitHub</span>
