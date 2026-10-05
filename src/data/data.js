@@ -1,3 +1,10 @@
+import quoteGenerator from  "../assets/quote.png";
+import ageChecker from "../assets/age-checker.png";
+import digitalClock from "../assets/digital-clock.png";
+import landingPage from "../assets/landing-page.png";
+import restaurant from "../assets/restaurant.png";
+import victoriaUzomaPortfolio from "../assets/victoria-uzoma.png";
+
 export const skills = [
     { name: "HTML", icon: "html", category: "Frontend" },
     { name: "CSS", icon: "css", category: "Frontend" },
@@ -17,7 +24,7 @@ export const projects = [
         title: "Quote Generator",
         description: "A JavaScript application that displays random motivational quotes.",
         technologies: ["HTML", "CSS", "JavaScript"],
-        image: "/src/assets/quote.png",
+        image: quoteGenerator,
         link: "https://quote-generator-pi-five.vercel.app/",
         github: "https://github.com/Victoria-Uzoma/Quote",
     },
@@ -26,7 +33,7 @@ export const projects = [
         title: "Age Checker",
         description: "A TypeScript project that checks the user's age and returns a result.",
         technologies: ["HTML", "CSS", "TypeScript"],
-        image: "/src/assets/age-checker.png",
+        image: ageChecker,
         link: "https://age-checker-ebon.vercel.app/",
         github: "https://github.com/Victoria-Uzoma/Age-Checker",
     },
@@ -35,7 +42,7 @@ export const projects = [
         title: "Digital Clock",
         description: "A digital clock application that displays the current time.",
         technologies: ["HTML", "CSS", "JavaScript"],
-        image: "/src/assets/digital-clock.png",
+        image: digitalClock,
         link: "https://digital-clock-rho-green.vercel.app/",
         github: "https://github.com/Victoria-Uzoma/My-digital-clock",
     },
@@ -44,7 +51,7 @@ export const projects = [
         title: "Landing Page",
         description: "A responsive landing page built with HTML, CSS and JavaScript.",
         technologies: ["HTML", "CSS", "JavaScript"],
-        image: "/src/assets/landing-page.png",
+        image: landingPage,
         link: "https://landing-page-woad-rho-19.vercel.app/",
         github: "https://github.com/Victoria-Uzoma/Landing-Page",
     },
@@ -53,7 +60,7 @@ export const projects = [
         title: "Restaurant Website",
         description: "A responsive restaurant website designed to showcase food, services and ordering information.",
         technologies: ["HTML", "CSS", "JavaScript"],
-        image: "/src/assets/restaurant.png",
+        image: restaurant,
         link: "https://restaurant-nine-weld.vercel.app/",
         github: "https://github.com/Victoria-Uzoma/restaurant",
     },
@@ -62,7 +69,7 @@ export const projects = [
         title: "Victoria Uzoma Portfolio",
         description: "My personal portfolio website built with HTML, CSS and JavaScript.",
         technologies: ["HTML", "CSS", "JavaScript"],
-        image: "/src/assets/victoria-uzoma.png",
+        image: victoriaUzomaPortfolio,
         link: "https://victoria-uzoma.vercel.app/",
         github: "https://github.com/Victoria-Uzoma/Victoria-Uzoma",
     },
