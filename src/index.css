@@ -783,6 +783,10 @@ h2 span {
    padding-bottom: 35px;
   }
 
+  .project-image {
+  height: 180px;
+}
+
   h1 {
     font-size: 3rem;
   }
