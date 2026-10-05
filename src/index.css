@@ -26,6 +26,14 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 body {
   min-width: 320px;
   min-height: 100vh;
@@ -720,6 +728,10 @@ h2 span {
   font-size: 0.8rem;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 /* =========================
    MOBILE
 ========================= */
@@ -729,9 +741,15 @@ h2 span {
   .page-section {
     width: min(100% - 28px, 700px);
   }
+
+  .menu-toggle {
+    display: flex;
+  }
+
   .orbit-ring {
   animation: orbitSpin 12s linear infinite;
   }
+
   .hero-content {
     width: min(100% - 28px, 700px);
   }

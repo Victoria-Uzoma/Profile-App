@@ -89,7 +89,7 @@ function Navbar({ darkMode, setDarkMode }) {
         {/* HAMBURGER */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className={`flex h-10 w-10 items-center justify-center rounded-full ${
+          className={`flex h-10 w-10 items-center justify-center rounded-full md:hidden ${
             darkMode ? "text-[#F3EBDD]" : "text-[#171313]"
           }`}
           aria-label="Toggle menu"
