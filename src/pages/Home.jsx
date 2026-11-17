@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import ImageWithLoader from "../components/ImageWithLoader";
 
 import { projects, articles, skills } from "../data/data";
 import SkillOrbit from "../components/SkillOrbit";
@@ -10,44 +11,50 @@ function Home() {
 
   return (
     <div>
+       {/* HERO */}
+<section className="hero-section">
 
-      {/* HERO */}
-      <section className="hero-section">
+  <div className="hero-content">
 
-        <div className="hero-content">
+    <p className="eyebrow">DEVELOPER • DESIGNER • CREATIVE</p>
 
-          <p className="eyebrow">DEVELOPER • DESIGNER • CREATIVE</p>
+    <h1>
+      Hi, I'm <span>Victoria Uzoma.</span>
+    </h1>
 
-          <h1>
-            Hi, I'm <span>Victoria Uzoma.</span>
-          </h1>
+    <h2>
+      I build useful digital experiences through code and creativity.
+    </h2>
 
-          <h2>
-            I build useful digital experiences through code and creativity.
-          </h2>
+    <p>
+      I'm a developer and graphic designer focused on creating
+      practical, thoughtful and user-friendly digital experiences.
+    </p>
 
-          <p>
-            I'm a developer and graphic designer focused on creating
-            practical, thoughtful and user-friendly digital experiences.
-          </p>
+    <div className="hero-buttons">
 
-          <div className="hero-buttons">
+      <NavLink to="/projects" className="primary-button">
+        View Projects
+        <ArrowRight size={18} />
+      </NavLink>
 
-            <NavLink to="/projects" className="primary-button">
-              View Projects
-              <ArrowRight size={18} />
-            </NavLink>
+      <NavLink to="/contact" className="secondary-button">
+        Contact Me
+      </NavLink>
 
-            <NavLink to="/contact" className="secondary-button">
-              Contact Me
-            </NavLink>
+    </div>
 
-          </div>
+  </div>
 
-        </div>
+  <div className="hero-image-container">
+    <ImageWithLoader
+    src="/Victoria.jpg"
+    alt="Victoria Uzoma"
+    className="hero-profile-image"
+    />
+    </div>
 
-      </section>
-
+   </section>
 
       {/* ABOUT PREVIEW */}
       <section className="page-section">

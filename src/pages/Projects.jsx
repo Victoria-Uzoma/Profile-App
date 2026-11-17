@@ -1,6 +1,7 @@
 import { projects } from "../data/data";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import ImageWithLoader from "../components/ImageWithLoader";
 
 function Projects() {
   return (
@@ -24,7 +25,7 @@ function Projects() {
         {projects.map((project) => (
           <article className="project-card" key={project.title}>
 
-            <img
+            <ImageWithLoader
               src={project.image}
               alt={project.title}
               className="project-image"

@@ -34,16 +34,6 @@ function Navbar({ darkMode, setDarkMode }) {
       {/* MAIN NAVBAR */}
       <div className="flex items-center justify-between">
 
-        {/* LOGO */}
-        <NavLink
-          to="/"
-          onClick={closeMenu}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-[#5A1F2B] font-bold text-[#F3EBDD]"
-          aria-label="Home"
-        >
-          VU
-        </NavLink>
-
         {/* DESKTOP ICONS */}
         <div className="hidden items-center gap-1 md:flex">
 
